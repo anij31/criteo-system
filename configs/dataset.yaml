@@ -1,0 +1,4 @@
+dataset: criteo_click_logs
+sample_size: 500000
+random_seed: 42
+output_format: parquet

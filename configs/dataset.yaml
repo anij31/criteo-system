@@ -1,4 +1,17 @@
-dataset: criteo_click_logs
-sample_size: 500000
-random_seed: 42
-output_format: parquet
+dataset:
+  name: criteo_1tb_click_logs
+
+sampling:
+  strategy: uniform_reservoir
+  target_rows: 500000
+  random_seed: 42
+  preserve_source_order: true
+
+format:
+  output: parquet
+
+split:
+  strategy: chronological
+  train_fraction: 0.8
+  validation_fraction: 0.1
+  test_fraction: 0.1
